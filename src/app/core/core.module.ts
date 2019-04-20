@@ -7,6 +7,9 @@ import { HomeComponent } from './home/home.component';
   declarations: [HeaderComponent, HomeComponent],
   imports: [
     CommonModule
+  ],
+  exports: [
+    HeaderComponent
   ]
 })
 export class CoreModule { }
