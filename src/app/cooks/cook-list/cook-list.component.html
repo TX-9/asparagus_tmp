@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success" (click)="onNewCook()">New Cook</button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <app-cook-item
+      *ngFor = "let cook of (cookState | async).cooks; let i = index"
+      [cook] = "cook"
+      [index] = "i"></app-cook-item>
+  </div>
+</div>
