@@ -1,9 +1,11 @@
 <a 
   style="cursor: pointer;"
+  [routerLink]="[index]"
+  routerLinkActive="active"
   class="list-group-item clearfix">
   <div class="pull-left">
-    <h4 class="list-group-item-heading"></h4>
-    <p class="list-group-item-text"></p>
+    <h4 class="list-group-item-heading">{{ cook.name }}</h4>
+    <p class="list-group-item-text">{{ cook.desc }}</p>
   </div>
   <span class="pull-right">
     <img src="" alt="{{ cook.name }}" class="img-responsive" style="max-height: 50px;">

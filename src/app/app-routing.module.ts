@@ -5,7 +5,7 @@ import { HomeComponent } from './core/home/home.component';
 import { CooksComponent } from './cooks/cooks.component';
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: HomeComponent },  
   { path: 'cooks', component: CooksComponent}
 ];
 
