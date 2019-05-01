@@ -3,10 +3,6 @@ import { Recipe } from '../../model/recipe.model';
 import * as fromApp from '../../store/app.reducers';
 import * as CookActions from './cook.actions';
 
-export interface FeatureState extends fromApp.AppState {
-    cooks: State;
-}
-
 export interface State {
     cooks: Cook[];
 }
@@ -31,5 +27,7 @@ export function cookReducer(state = initialState, action: CookActions.CookAction
                 ...state,
                 cooks: [...action.payload]
             };
+        default:
+            return state;
     }
 }

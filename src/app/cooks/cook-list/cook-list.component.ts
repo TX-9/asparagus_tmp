@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import * as fromCook from '../store/cook.reducers';
+import * as fromApp from '../../store/app.reducers';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Store } from '@ngrx/store';
+import { Cook } from 'src/app/model/cook.model';
 
 @Component({
   selector: 'app-cook-list',
@@ -10,11 +11,11 @@ import { Store } from '@ngrx/store';
   styleUrls: ['./cook-list.component.css']
 })
 export class CookListComponent implements OnInit {
-  cookState: Observable<fromCook.State>;
+  cookState: Observable<{cooks: Cook[]}>;
 
   constructor(private router: Router,
               private route: ActivatedRoute,
-              private store: Store<fromCook.FeatureState>) { }
+              private store: Store<fromApp.AppState>) { }
 
   ngOnInit() {
     this.cookState = this.store.select('cooks');
