@@ -18,7 +18,7 @@ const cooksRoutes: Routes = [
   imports: [
     RouterModule.forChild(cooksRoutes)
   ],
-  exports: [ RouterModule ],
+  exports: [ RouterModule ],  
   providers: [
 
   ]

@@ -26,9 +26,6 @@ import { reducers } from './store/app.reducers';
     CooksModule,
     StoreModule.forRoot(reducers),
     !environment.production ? StoreDevtoolsModule.instrument() : []
-  
-    
-    
   ],
   providers: [],
   bootstrap: [AppComponent]
